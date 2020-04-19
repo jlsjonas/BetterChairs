@@ -24,10 +24,10 @@ public class UpdateManager implements Listener {
 
     public String getLastSpigotVersion() {
         try {
-            HttpURLConnection con = (HttpURLConnection) new URL("http://dev.blackscarx.com/betterchairsversion.txt").openConnection();
+            HttpURLConnection con = (HttpURLConnection) new URL("http://BlackScarx.github.io/BetterChairs/version.txt").openConnection();
             return new BufferedReader(new InputStreamReader(con.getInputStream())).readLine();
         } catch (Exception ex) {
-            System.out.println("[BetterChairs] Failed to check for a update on spigot.");
+            System.out.println("[BetterChairs] Failed to check for updates.");
         }
         return null;
     }
@@ -44,7 +44,8 @@ public class UpdateManager implements Listener {
                 if (version == null)
                     return;
                 if (!version.equals(ChairsPlugin.getPlugin(ChairsPlugin.class).getDescription().getVersion())) {
-                    p.sendMessage("§a[BetterChairs] Find new update ! §6Version: " + version);
+                    p.sendMessage("§a[BetterChairs] New update available! §6Version: " + version
+                            + "(current " + ChairsPlugin.getPlugin(ChairsPlugin.class).getDescription().getVersion() + ")");
                     ChairsPlugin.getNMS().sendUpdate(p);
                 }
             }

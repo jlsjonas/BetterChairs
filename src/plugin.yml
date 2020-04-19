@@ -1,6 +1,6 @@
 main: net.blackscarx.betterchairs.ChairsPlugin
 name: BetterChairs
-version: 0.10.2
+version: 0.10.3
 author: BlackScarx
 commands:
   betterchairsreload:
@@ -18,7 +18,7 @@ permissions:
   betterchairs.reload:
     description: Reload the config
   betterchairs.regen:
-    description: Regen when you are sit on chairs
+    description: Regen when you are sitting on chairs
   betterchairs.toggle:
     description: Permission for command betterchairstoggle
   betterchairs.reset:
